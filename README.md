@@ -33,6 +33,10 @@ python manage.py runserver
 - See on [localhost](http://127.0.0.1:8000/)
 - See on [heroku](https://test-conceptu.herokuapp.com)
 
+
+### API Documentation 
+- See on [postman] (https://documenter.getpostman.com/view/2491745/TzmCfsbM)
+
 ### Get access token   
 ```
 curl -d '{"username":"admin", "password":"1234"}' -H "Content-Type: application/json" -X POST https://test-conceptu.herokuapp.com/api/token/
@@ -42,7 +46,3 @@ curl -d '{"username":"admin", "password":"1234"}' -H "Content-Type: application/
 ```
 curl https://test-conceptu.herokuapp.com/books/ -H "Accept: application/json" -H "Authorization: Bearer {token}"
 ```
-
-
-
-
