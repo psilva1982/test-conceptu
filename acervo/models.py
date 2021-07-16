@@ -18,4 +18,4 @@ class Book(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
 
     class Meta:
-        unique_together = ('name', 'author',)
+        unique_together = ('name', 'author', 'user')
