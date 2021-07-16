@@ -35,7 +35,7 @@ python manage.py runserver
 
 
 ### API Documentation 
-- See on [postman] (https://documenter.getpostman.com/view/2491745/TzmCfsbM)
+- See on [postman doc](https://documenter.getpostman.com/view/2491745/TzmCfsbM)
 
 ### Get access token   
 ```
