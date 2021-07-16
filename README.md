@@ -20,7 +20,7 @@ pip install -r requirements-dev
 python manage.py migrate
 ```
 
-### Run Migrations
+### Run local
 ```
 python manage.py runserver
 ```
