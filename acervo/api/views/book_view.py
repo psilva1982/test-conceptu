@@ -1,5 +1,6 @@
 
 from rest_framework import viewsets
+from rest_framework import serializers
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.authentication import SessionAuthentication
@@ -29,4 +30,7 @@ class BookViewSet(viewsets.ModelViewSet):
 
     
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+        try: 
+            serializer.save(user=self.request.user)
+        except:
+            raise serializers.ValidationError('Você já cadastrou um livro com este nome e autor.')
