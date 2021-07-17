@@ -1,6 +1,6 @@
 # test-conceptu
 
-## Installation with docker-compose
+### Installation with docker-compose
 
 ```
 git clone https://github.com/psilva1982/test-conceptu
