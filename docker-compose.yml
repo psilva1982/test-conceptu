@@ -1,9 +1,33 @@
-version: '3'
-services: 
-    test-conceptu:
+version: '3.9'
+
+services:
+    api:
+        container_name: api
         build: .
-        command: python manage.py runserver 0.0.0.0:8000
+        command: ["./wait_for_postgres.sh", "db", "./entrypoint.sh"]
         volumes: 
             - ./:/app
         ports: 
             - "8000:8000"
+        environment:
+            - USE_POSTGRES=True
+            - DB_HOST=db
+            - DB_NAME=test
+            - DB_USER=postgres
+            - DB_PASS=postgres
+        depends_on:
+            - db
+
+    db:
+        container_name: db
+        image: postgres:9.4
+        restart: always
+        volumes:
+            - .pgdata:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=test
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        ports:
+            - "5432:5432"
+

@@ -1,56 +1,32 @@
 # test-conceptu
 
-# Run with docker compose 
+## Installation with docker-compose
+
 ```
+git clone https://github.com/psilva1982/test-conceptu
+cd test-conceptu
 docker-compose up -d
 ```
 
-# or you can run local with virtual env 
-## Create python3 environment
-```
-python3 -m venv venv
-```
+### Instalação com virtual env
 
-### Activate environment
 ```
+git clone https://github.com/psilva1982/test-conceptu
+cd test-conceptu
+python3 -m venv venv 
 source venv/bin/activate
-```
-
-### Install dependencies 
-```
-pip install -r requirements-dev
-```
-
-### Run migrations 
-``` 
+pip install -r requirements-dev.txt
 python manage.py migrate
-```
-
-### Run server
-```
 python manage.py runserver
 ```
 
-## Access API
-
-### Users 
-- admin / 1234
-- test / 1234  
-
-### Test
-- See on [localhost](http://127.0.0.1:8000/)
-- See on [heroku](https://test-conceptu.herokuapp.com)
-
-
-### API Documentation 
+### Documentação
 - See on [postman doc](https://documenter.getpostman.com/view/2491745/TzmCfsbM)
 
-### Get access token   
-```
-curl -d '{"username":"admin", "password":"1234"}' -H "Content-Type: application/json" -X POST https://test-conceptu.herokuapp.com/api/token/
-```
+### Users
+- admin / 1234
+- test / 1234
 
-### Sending request with token 
-```
-curl https://test-conceptu.herokuapp.com/books/ -H "Accept: application/json" -H "Authorization: Bearer {token}"
-```
+### Acessar o ambiente
+- [Local]([http://localhost:8000) - http://localhost:8000
+- [Heroku](https://test-conceptu.herokuapp.com/) - https://test-conceptu.herokuapp.com/
