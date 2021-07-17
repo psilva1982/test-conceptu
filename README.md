@@ -8,7 +8,7 @@ cd test-conceptu
 docker-compose up -d
 ```
 
-### Instalação com virtual env
+### Instalation with virtual env
 
 ```
 git clone https://github.com/psilva1982/test-conceptu
@@ -20,13 +20,13 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-### Documentação
+### Documentation
 - See on [postman doc](https://documenter.getpostman.com/view/2491745/TzmCfsbM)
 
 ### Users
 - admin / 1234
 - test / 1234
 
-### Acessar o ambiente
-- [Local]([http://localhost:8000) - http://localhost:8000
+### Access on 
+- [Local](http://localhost:8000) - http://localhost:8000
 - [Heroku](https://test-conceptu.herokuapp.com/) - https://test-conceptu.herokuapp.com/
