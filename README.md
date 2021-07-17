@@ -1,5 +1,11 @@
 # test-conceptu
 
+# Run with docker compose 
+```
+docker-compose up -d
+```
+
+# or you can run local with virtual env 
 ## Create python3 environment
 ```
 python3 -m venv venv
@@ -20,10 +26,12 @@ pip install -r requirements-dev
 python manage.py migrate
 ```
 
-### Run local
+### Run server
 ```
 python manage.py runserver
 ```
+
+## Access API
 
 ### Users 
 - admin / 1234
