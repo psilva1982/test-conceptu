@@ -23,7 +23,7 @@ def load_categories(apps, schema_editor):
         'Ação',
         'Ficção Científica',
         'Suspense',
-        'Terror'
+        'Terror',
         'Geografia',
         'História'
     ]
